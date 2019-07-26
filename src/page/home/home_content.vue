@@ -127,7 +127,6 @@ export default{
                     -o-transition: border-left-width .2s;	/* Opera */
                     &:hover{
                         border-left-width: 3px;
-                        // border-color: red;
                     }
                 }
             }
