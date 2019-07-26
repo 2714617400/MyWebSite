@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <navmenu :list="['头部']"></navmenu>
+    <div class="home">
+        <navmenu></navmenu>
         <router-view></router-view>
     </div>
 </template>
@@ -14,7 +14,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-p{
-    color: red;
+@import '../../style/Default_theme.less';
+.home {
+    height: 100%;
+    background: @background;
 }
 </style>
