@@ -5,7 +5,6 @@
         <li>照片</li>
         <li>动漫世界</li>
     </ul>
-    <span class="back" @click="backTo()">退</span>
 </div>
 </template>
 
@@ -17,9 +16,7 @@ export default{
     mounted() {
     },
     methods: {
-        backTo () {
-            this.$router.go(-1)
-        }
+
     }
 }
 </script>
@@ -45,17 +42,6 @@ export default{
                background:  @hover-background;
            }
        }
-   }
-   .back{
-       padding: 5px 15px;
-       border-radius: 50%;
-       color: @color;
-       position: absolute;
-       background: @box-background;
-       top: 50%;
-       right: 5px;
-       transform: translateY(-50%);
-       cursor: pointer;
    }
 }
 </style>

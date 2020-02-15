@@ -1,13 +1,67 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
+    <div class="my-music">
+      <aplayer autoplay
+        :float="true"
+        :music="{
+          title: 'secret base~君がくれたもの~',
+          artist: 'Silent Siren',
+          src: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.mp3',
+          pic: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.jpg',
+          theme: 'pic'
+        }"
+        :listFolded="true"
+        :list="list"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import Aplayer from 'vue-aplayer';
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Aplayer
+  },
+  data() {
+    return {
+      list: [
+        {
+          title: 'secret base~君がくれたもの~',
+          artist: 'Silent Siren',
+          src: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.mp3',
+          pic: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.jpg',
+          theme: 'pic'
+        },
+        {
+          title: 'secret base~君がくれたもの~',
+          artist: 'Silent Siren',
+          src: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.mp3',
+          pic: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.jpg',
+          theme: 'pic'
+        },
+        {
+          title: 'secret base~君がくれたもの~',
+          artist: 'Silent Siren',
+          src: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.mp3',
+          pic: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.jpg',
+          theme: 'pic'
+        },
+        {
+          title: 'secret base~君がくれたもの~',
+          artist: 'Silent Siren',
+          src: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.mp3',
+          pic: 'https://cn-south-17-aplayer-46154810.oss.dogecdn.com/hikarunara.jpg',
+          theme: 'pic'
+        },
+      ]
+    }
+  },
+  created() {
+    
+  }
 }
 </script>
 
@@ -17,12 +71,16 @@ export default {
   margin: 0;
 }
 #app {
-  height: 100%;
+  min-height: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
+}
+.my-music {
+  position: fixed;
+  bottom: 0px;
 }
 </style>
